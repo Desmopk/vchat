@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "614995302102",
+    "project_id": "tarnished-a3a2d",
+    "storage_bucket": "tarnished-a3a2d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614995302102:android:44dce3469438e8da01db77",
+        "android_client_info": {
+          "package_name": "com.example.vchat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtgv1Jp_tt4S4tLEs_moGxroGG-53hT4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
