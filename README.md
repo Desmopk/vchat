@@ -38,3 +38,37 @@ A real-time live chat application built with **Flutter** using **WebSockets** fo
 ```bash
 git clone https://github.com/Desmopk/vchat.git
 cd vchat
+```
+#### 2. Install Dependencies
+```bash
+flutter pub get
+```
+#### 3. Configure WebSocket Endpoint
+Open the file where WebSocket connection is initialized (e.g., chat_service.dart) and update with your backend URL:
+```bash
+final _channel = WebSocketChannel.connect(
+  Uri.parse('ws://your-server-address:port'),
+);
+```
+#### 4. Run the App
+```bash
+flutter run
+```
+📁 Project Structure
+```bash
+vchat/
+├── lib/
+│   ├── main.dart                   # Entry point
+│   ├── screens/
+│   │   ├── login_screen.dart       # User login UI
+│   │   └── chat_screen.dart        # Main chat screen
+│   ├── services/
+│   │   └── chat_service.dart       # WebSocket connection logic
+│   ├── widgets/
+│   │   ├── message_bubble.dart     # UI widget for individual message
+│   │   └── message_input.dart      # UI widget for sending messages
+│   └── models/
+│       └── message_model.dart      # Model class for message objects
+├── pubspec.yaml                    # Flutter dependencies
+└── README.md                       # Project documentation
+```
