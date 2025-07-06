@@ -1,16 +1,44 @@
-# vchat
+# vchat 💬
 
-A new Flutter project.
+A real-time live chat application built with **Flutter** using **WebSockets** for seamless and fast communication.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🔗 Real-time messaging using WebSocket
+- 🧑‍🤝‍🧑 Live chat between users
+- 📱 Beautiful and responsive UI with Flutter
+- 🌐 Server-client architecture (WebSocket backend required)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+- **Frontend**: Flutter (Dart)
+- **Real-time Communication**: WebSocket
+
+---
+
+## 📦 Installation
+
+### Prerequisites
+
+- Flutter SDK installed: [Flutter Setup](https://docs.flutter.dev/get-started/install)
+- WebSocket server (i am using a Node.js backend you can use any websocket supported backend.)
+
+### Steps
+
+1. **Clone the repo**:
+
+```bash
+git clone https://github.com/Desmopk/vchat.git
+cd vchat
+Open the file where WebSocket connection is initialized (e.g., chat_service.dart) and set the correct WebSocket server URL:
+
+dart
+Copy
+Edit
+final _channel = WebSocketChannel.connect(
+  Uri.parse('ws://your-server-address:port'),
+);
