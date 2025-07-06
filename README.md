@@ -17,6 +17,7 @@ A real-time live chat application built with **Flutter** using **WebSockets** fo
 
 - **Frontend**: Flutter (Dart)
 - **Real-time Communication**: WebSocket
+- **Backend (User's Choice)**: Node.js WebSocket server (or any WebSocket-supporting backend)
 
 ---
 
@@ -24,8 +25,9 @@ A real-time live chat application built with **Flutter** using **WebSockets** fo
 
 ### Prerequisites
 
-- Flutter SDK installed: [Flutter Setup](https://docs.flutter.dev/get-started/install)
-- WebSocket server (i am using a Node.js backend you can use any websocket supported backend.)
+- Flutter SDK installed: [Flutter Setup Guide](https://docs.flutter.dev/get-started/install)
+- Node.js or any WebSocket backend running
+- An emulator or real device to run the Flutter app
 
 ### Steps
 
@@ -34,7 +36,15 @@ A real-time live chat application built with **Flutter** using **WebSockets** fo
 ```bash
 git clone https://github.com/Desmopk/vchat.git
 cd vchat
-Open the file where WebSocket connection is initialized (e.g., chat_service.dart) and set the correct WebSocket server URL:
+Install dependencies:
+
+bash
+Copy
+Edit
+flutter pub get
+Configure WebSocket Endpoint:
+
+Open the file where WebSocket connection is initialized (e.g., chat_service.dart) and replace the placeholder with your actual backend address:
 
 dart
 Copy
@@ -42,3 +52,28 @@ Edit
 final _channel = WebSocketChannel.connect(
   Uri.parse('ws://your-server-address:port'),
 );
+Run the app:
+
+bash
+Copy
+Edit
+flutter run
+📁 Project Structure
+bash
+Copy
+Edit
+vchat/
+├── lib/
+│   ├── main.dart                   # Entry point
+│   ├── screens/
+│   │   ├── login_screen.dart       # User login UI
+│   │   └── chat_screen.dart        # Main chat screen
+│   ├── services/
+│   │   └── chat_service.dart       # WebSocket connection logic
+│   ├── widgets/
+│   │   ├── message_bubble.dart     # UI widget for individual message
+│   │   └── message_input.dart      # UI widget for sending messages
+│   └── models/
+│       └── message_model.dart      # Model class for message objects
+├── pubspec.yaml                    # Flutter dependencies
+└── README.md                       # Project documentation
